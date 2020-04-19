@@ -1,0 +1,77 @@
+#header, .row, #hd, #racxa {
+  color: red;
+  text-align: center;
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2), 0px 0px 20px #ECFF1F; }
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./1.jpg);
+  background-size: cover;
+  height: auto;
+  max-width: 100%; }
+
+.div {
+  opacity: 1;
+  color: red;
+  text-align: center;
+  padding: 10%;
+  font-size: 50px;
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2), 0px 0px 20px #ECFF1F; }
+
+.navbar-inner {
+  background: transparent; }
+
+.navbar li {
+  font-size: 20px;
+  text-align: center;
+  word-spacing: 10px; }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; }
+
+.table {
+  color: yellow;
+  text-align: center;
+  background-color: rgba(125, 120, 121, 0.2);
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2), 0px 0px 20px #ECFF1F; }
+
+#header {
+  font-size: 70px; }
+
+.row {
+  font-size: 30px;
+  padding: 10px; }
+  .row a {
+    color: blue;
+    text-decoration: underline; }
+
+.col-lg-4, .col-sm-6 {
+  border: solid 1px black;
+  background-color: rgba(109, 136, 199, 0.8);
+  padding: 10px; }
+
+a:hover {
+  color: red; }
+
+#hd {
+  font-size: 50px; }
+
+#racxa {
+  font-size: 50px; }
+  #racxa .list-group {
+    padding: 20px; }
+  #racxa .list-group-item {
+    font-weight: 900;
+    color: red; }
+
+@media (max-width: 500px) {
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./2.jpg);
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; } }
+
+/*# sourceMappingURL=style.css.map */
