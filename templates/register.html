@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link href="/static/med.png" rel="icon">
+            <link href="/static/styles.css" rel="stylesheet">
+
+
+
+            <title>Register</title>
+
+        </head>
+
+        <body>
+            <h1 id="container">Registration</h1>
+            <form action="/register" method="post">
+                <div>
+                    <input autocomplete="off"  name="username" placeholder="Username" type="text" id="log" minlength="5">
+                </div>
+                <div>
+                    <input  name="password" placeholder="Password" type="password"  id="log1" minlength="5">
+                </div>
+                <div>
+                    <input  name="confirm" placeholder="Confirm Password" type="password" id="log2" minlength="5">
+                </div>
+                <button id="but4" type="submit">Register</button>
+            </form>
+
+            <button onclick="goBack()" id="but4" style="top:85%; font-size:180%; border-style:hidden;">Back</button>
+
+        <script>
+        function goBack() {
+          window.history.back();
+        }
+        </script>
+        </body>
+
+        <footer id="foot">Brought To You By @Grandson</footer>
+
+
+    </html>

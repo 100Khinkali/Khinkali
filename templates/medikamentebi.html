@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Meds
+{% endblock %}
+
+{% block main %}
+    <body>
+        <h1 id="bpp1">Medications</h1>
+
+        <ol type="1" id="list">
+            {% for I in range(lislen) %}
+            <li>{{ lis[I]["meds"] }}</li>
+            {% endfor %}
+        </ol>
+        <button id="med1" onclick="window.location='/AddMeds';">ADD Medications</button>
+        <button id="med1" onclick="window.location='/ClearMeds';">Clear Medications</button>
+    </body>
+{% endblock %}

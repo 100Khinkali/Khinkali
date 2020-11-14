@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Meds
+{% endblock %}
+
+{% block main %}
+    <body>
+            <h1 id="bpp1">Add Medications</h1>
+            <form action="/AddMeds" method="post">
+                <div>
+                    <input autocomplete="off"  name="meds" placeholder="Medication Name" type="text" id="log" minlength="2" maxlength="20">
+                </div>
+
+                <button id="but3" type="submit">Submit</button>
+            </form>
+        </body>
+{% endblock %}

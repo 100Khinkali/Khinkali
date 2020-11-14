@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+    <body>
+            <h1 id="bpp2">Are You Sure?</h1>
+            <form action="/delete" method="post">
+
+                <button id="but" type="submit" name="yes">Yes</button>
+                <button id="but2" type="submit" name="no">No</button>
+            </form>
+        </body>
+{% endblock %}

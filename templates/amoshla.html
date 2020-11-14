@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+    <body>
+            <h1 id="bpp3">Which One Would You Like To Delete</h1>
+            <form action="/ClearMeds" method="post">
+
+                	{% for I in range(lislen) %}
+                	<input id="list2" type="submit"  onclick="return confirm('Are you sure?');" name="saxl" value="{{ lis[I]["meds"] }}" ></input>
+                	{% endfor %}
+
+            </form>
+        </body>
+{% endblock %}

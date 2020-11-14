@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block main %}
+<table id="tabl">
+  <tr id="bool">
+    <td style="border-left:hidden; border-top:hidden"></td>
+    <th scope="col" id="bool">B/P</th>
+    <th scope="col" id="bool">Sugar</th>
+    {% if med != 0 %}
+
+    {% for I in range(med) %}
+
+    <th scope="col" id="bool">{{ rows[I]["meds"] }}</th>
+
+    {% endfor %}
+
+    {% endif %}
+
+
+
+  </tr>
+  {% if data != 0 %}
+
+  {% for l in range((data-1),-1,-1) %}
+  <tr id="tr{{ l }}">
+
+    <th scope="row" id="bool1">{{ dat[l]["time"] }}</th>
+
+
+    <td style="font-size:40px">{{ ssp[l]["blood"] }}/{{ ssp[l]["pulse"] }}</td>
+
+
+    <td style="font-size:40px">{{ ssp[l]["sugar"] }}</td>
+
+
+    {% for I in range(med) %}
+    <td style="font-size:40px" id="ptich {{ I }}.{{ l }}">
+      <form action="/" method="post">
+        <div class="form-group">
+            <select class="meniu" name="symbol{{ l }}{{ I }}">
+                <option selected disabled>&#10008;</option>
+                <option type="submit">&#10004;</option>
+            </select>
+            <button type="submit">+</button>
+        </div>
+
+    {% endfor %}
+
+    <td style="font-size:70px; padding: 0 30px;" id="loadin{{ l }}" name="racxa">{{ traki[l]["complete"] }}</td>
+
+
+  </form>
+  </tr>
+  {% endfor %}
+
+  {% else %}
+  <tr>
+    <th scope="row" id="bool1">Date</th>
+
+  </tr>
+  {% endif %}
+
+</table>
+
+<button onclick="window.location='/delete';" id="but7">Clear History</button>
+
+<script>
+
+  /*
+  this is a javascript for my failed attempt to make the buttons change onclick and without refreshing the page.
+  I am still not on this level to make this opperate but i left it here as a remainder for myself
+  */
+
+
+  const klasi = [];
+  const sul = [];
+
+  function noop() {};
+
+  function ptichka() {
+      ptichka = noop;
+
+      for(j = 0;j<{{ data }};j++)
+      {
+        for(i = 0; i<{{ med }};i++)
+        {
+          klasi.push(document.getElementById(`ptich ${i}.${j}`));
+        }
+      }
+
+      for(k = 0; k < {{ data }};k++)
+      {
+        sul.push(klasi.slice(0, {{ med }}));
+        klasi.splice(0, {{ med }});
+      }
+    }
+
+
+  function shemoWmeba(racxa)
+  {
+    if(racxa.innerHTML === "\u2714")
+    {
+      return true;
+    }
+
+    return false;
+  }
+
+  function knopka(id)
+  {
+    var bolo = id.slice(-1);
+    if(sul[bolo].every(shemoWmeba) == true)
+    {
+      document.getElementById(`loadin${[bolo]}`).innerHTML = '{{ traki }}';
+      document.getElementById(`loadin${[bolo]}`).setAttribute("name","wavida")
+    }
+  }
+
+
+
+</script>
+
+{% endblock %}

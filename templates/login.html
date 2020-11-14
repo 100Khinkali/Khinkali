@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+
+            <link href="/static/med.png" rel="icon">
+            <link href="/static/styles.css" rel="stylesheet">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+            <title>Login</title>
+
+        </head>
+
+        <body>
+            <h1 id="container">Login Form</h1>
+            <form action="/login" method="post">
+                <div>
+                    <input autocomplete="off"  name="username" placeholder="Username" type="text" id="log">
+                </div>
+                <div>
+                    <input  name="password" placeholder="Password" type="password"  id="log1">
+                </div>
+                <button id="but3" type="submit">Log In</button>
+            </form>
+            <button onclick="goBack()" id="but3" style="top:75%; font-size:180%; border-style:hidden;">Back</button>
+
+        <script>
+        function goBack() {
+          window.history.back();
+        }
+        </script>
+        </body>
+
+        <footer id="foot">Brought To You By @Grandson</footer>
+
+
+    </html>

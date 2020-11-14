@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+            <h1 id="bpp1">Change Password</h1>
+
+            <form action="/change" method="post">
+                <div class="form-group">
+                    <input autocomplete="off" name="pass" placeholder="Current Password" type="password" id="log">
+                </div>
+
+                <div class="form-group">
+                    <input autocomplete="off" name="pass1" placeholder="New Password" type="password" id="log1" minlength="5">
+                </div>
+
+                <div class="form-group">
+                    <input autocomplete="off" name="pass2" placeholder="Confirm" type="password" id="log2" minlength="5">
+                </div>
+                <button a href="/" id="but5">Change Password</button>
+        </form>
+
+{% endblock %}

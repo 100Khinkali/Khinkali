@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BP/Pulse
+{% endblock %}
+
+{% block main %}
+    <body>
+            <h1 id="bpp">Enter Blood Pressure, Pulse and Sugar Levels</h1>
+            <form action="/BPS" method="post">
+
+                <div>
+                    <input autocomplete="off"  name="blood" placeholder="Blood Pressure" type="text" id="log" minlength="2" maxlength="3">
+                </div>
+
+                <div>
+                    <input autocomplete="off"  name="pulse" placeholder="Pulse" type="text" id="log1" minlength="2" maxlength="3">
+                </div>
+
+                <div>
+                    <input autocomplete="off"  name="sugar" placeholder="Sugar" type="text" id="log2" maxlength="3">
+                </div>
+                <button id="but5" type="submit">Submit</button>
+            </form>
+        </body>
+
+{% endblock %}
