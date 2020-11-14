@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+
+	<h1 class="header" style='border-bottom:solid 5px #eee;'>{{ text }}</h1>
+	<button onclick="goBack()" class='submit'>Go Back</button>
+
+	<script>
+		function goBack() {
+		  window.history.back();
+		}
+	</script>
+
+{% endblock %}

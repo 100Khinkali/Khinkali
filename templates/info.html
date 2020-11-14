@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ book['title'] }}
+{% endblock %}
+
+{% block main %}- j -->
+	<a type='button' href='/logout' class='logout'>Log Out</a>
+	<h1 class="header" style='border-bottom:solid 5px #eee;'>{{ book['title'] }}</h1>
+	<p class="info">Is a Book written by <b><u>{{ book['author'] }}</u></b>, in <b><u>{{ book['year'] }}</u></b></p>
+	<p class="info">Book Serial Number: <b><u>{{ book['isbn'] }}</u></b></p>
+	<p class="info">Rated: <b><u>{{ j['work_ratings_count'] }}</u></b> - Times</p>
+	<p class="info">Average Rating: <b><u>&#9734;{{ j['average_rating'] }}&#9734;</u></b></p>
+	<p class="info"><b>API </b>: "url"/books/{{ book['isbn'] }}</p>
+
+	<div>
+		<button onclick="goBack()" class='submit'>New Search</button>
+	</div>
+
+	{% if test != 1 %}
+
+		<form action="/books/{{ book['isbn'] }}" method="post">
+				<div class="form-group">
+				    <label for="exampleFormControlTextarea1" class="label">Submit A Review:</label>
+				    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="review"></textarea>
+				</div>	
+
+				<div class="form-group" id="rate">
+				    <label for="customRange3" class="label">Rate (1-5)</label>
+				    <input type="range" class="custom-range" min="0" max="5" step="0.1" id="customRange3" 
+				    onchange="updateTextInput(this.value)" name="rate">
+				    <div id="val" class="rati">2.5</div>
+				</div>
+
+				<button class="submit">Submit</button>
+		</form>
+
+	{% else %}
+		
+		<div>
+			<p class="info" style='font-size:22px; border:none; margin-top: 30px; color:red;'>You've Already Submited Your Review</p>
+		</div>
+		
+	{% endif %}
+
+	<h1 class="header" style='border-bottom:solid 5px #eee; font-size:30px;'>Reviews</h1>
+
+	{% if review %}
+	
+		{% for i in range(lenview) %}
+		
+		<div class='reviews'>
+			<p class="revP">{{ review[i]['username'] }} Rated : <b><u>&#9734;{{ review[i]['rating'] }}&#9734;</u></b></p>
+			<p class="revR">{{ review[i]['review'] }}</p>
+		</div>
+
+		{% endfor %}
+
+	{% else %}
+
+		<div>
+			<p class='header' style='font-size:30px;'>No Reviews Yet</p>
+		</div>
+
+	{% endif %}
+
+<script type="text/javascript">
+	function updateTextInput(val) {
+          document.getElementById('val').innerHTML=val; 
+        }
+
+	function goBack() {
+		 window.location.href="/main";
+		}
+</script>
+
+{% endblock %}

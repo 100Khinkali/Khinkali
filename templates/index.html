@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block main %}
+	<h1 class="header">Welcome Fellow Reader</h1>
+	
+	<p class="p">To A Place Of Books</p>
+
+	<div class="container-fluid">
+	   <div class="col-sm-12 text-center">
+	       <button class="btn btn-outline-danger" onclick="location.href='/login'">Log In</button>
+	       <button class="btn btn-outline-danger" onclick="location.href='/register'">Register</button>
+	   </div>
+	</div>
+
+{% endblock %}

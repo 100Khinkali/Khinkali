@@ -1,0 +1,298 @@
+body {
+	background-color: #ccc;
+}
+
+@media (min-width:500px) {
+		.header {
+		font-size:60px;
+		padding:40px;
+		font-family: georgia;
+		color:red;
+		text-align:center;
+		width:70%;
+		margin:40px auto;
+		text-shadow:2px 2px #eee;
+	}
+
+	.p {
+		font-size:30px;
+		padding:10px;
+		font-family: georgia;
+		color:#191d9e;
+		text-align:center;
+		width:70%;
+		margin:40px auto;
+		text-shadow:2px 2px #eee;
+		border-bottom:solid 5px #eee;
+		border-radius:5px;
+	}
+
+	.btn {
+		font-size: 30px;
+		margin:20px;
+		border-radius:10px;
+		font-family:georgia;
+		width:70%;
+	}
+
+	.reg {
+		width:70%;
+		text-align:center;
+		margin:auto;
+		padding:10px;
+	}
+
+	.reviews {
+		border:solid 2px black;
+		margin:auto;
+		width:75%;
+		border-radius: 10px;
+		margin-bottom: 7px;
+	}
+
+	.revP {
+		text-align: center;
+		font-size: 22px;
+		font-family: georgia;
+		color:#191d9e;
+		text-shadow:2px 2px #eee;
+		padding:5px;
+		border-bottom: solid 1px black;
+	}
+
+	.input {
+		padding:7px;
+		width:30%;
+		border-radius: 5px;
+		border:none;
+	}
+
+	.input:focus {
+		padding:17px;
+		width:40%;
+		border-radius: 10px;
+		outline: none;
+	}
+
+	.submit {
+		width:18%;
+		margin-left:41%;
+		margin-top: 15px;
+		padding:12px;
+		border-radius: 10px;
+		font-family: georgia;
+		border:solid 1px #dc3535	;
+		background-color: transparent;
+		cursor:pointer;
+		color:red;
+		font-weight: 550;
+		font-size:18px;
+	}
+
+	.submit:hover {
+		background-color: #dc3535;
+		color:white;
+	}
+
+	label {
+		font-size:18px;
+		font-family: georgia;
+	}
+
+	.list {
+		font-size:25px;
+		border-left: solid 5px #e46969;
+		padding-left:10px;
+	}
+
+	.list:hover {
+		background-color: #e46969;
+		color:white;
+		border-radius:10px;
+		font-size:35px;
+	}
+
+	a:hover {
+		color:white;
+	}
+
+	.info {
+		width:60%;
+		margin: 7px  auto;
+		text-align: center;
+		font-family: georgia;
+		font-size:18px;
+		border-bottom: solid 2px #eee;
+		padding: 7px;
+	}
+
+	.form-control {
+		width:70%;
+		margin:auto;
+		margin-top: 20px;
+	}
+
+	.label {
+		text-align: center;
+		font-size:25px;
+		width:70%;
+		margin-left:15%;
+		margin-top: 50px;
+		color:red;
+		text-shadow:2px 2px #eee;
+	}
+
+	.custom-range {
+		width:70%;
+		margin-left:15%;
+	}
+
+	.rati {
+		border:solid 1px black; 
+		width:20%;
+		margin-left:40%; 
+		border-radius:15px;
+		text-align: center;
+		font-size:25px;
+		margin-top: 50px;
+		color:blue;
+	}
+
+	#rate {
+		border:solid 1px black;
+		width:70%;
+		margin-left: 15%;
+		padding:10px;
+		border-radius:30px;
+	}
+
+	.revR {
+		font-size:30px;
+		color:red;
+		text-align:center;
+		padding:5px;
+		text-transform: capitalize;
+	}
+
+	.logout {
+		float:right;
+		margin:15px;
+		border:solid 2px blue;
+		padding:5px;
+		border-radius: 5px;
+		color:red;
+		background-color: #ccc;
+	}
+
+	.logout:hover {
+		background-color: red;
+		color:white;
+	}
+}
+
+@media (max-width: 499px) {
+	.header {
+		padding:40px;
+		font-family: georgia;
+		color:red;
+		text-align:center;
+		width:70%;
+		margin:30px auto;
+		text-shadow:2px 2px #eee;
+	}
+
+	.p {
+		font-size:30px;
+		padding:10px;
+		font-family: georgia;
+		color:#191d9e;
+		text-align:center;
+		width:70%;
+		margin:40px auto;
+		text-shadow:2px 2px #eee;
+		border-bottom:solid 5px #eee;
+		border-radius:5px;
+	}
+
+	.submit {
+		width:18%;
+		margin-left:41%;
+		margin-top: 15px;
+		padding:12px;
+		border-radius: 10px;
+		font-family: georgia;
+		border:solid 1px #dc3535	;
+		background-color: transparent;
+		cursor:pointer;
+		color:red;
+		font-weight: 550;
+		font-size:10px;
+	}
+
+	.reg {
+		width:70%;
+		text-align:center;
+		margin:auto;
+		padding:10px;
+	}
+
+	.input {
+		padding:7px;
+		width:60%;
+		border-radius: 5px;
+		border:none;
+	}
+
+	.logout {
+		margin:15px;
+		margin-left:80%;
+		text-align: center;
+		border:solid 2px blue;
+		padding:5px;
+		border-radius: 5px;
+		color:red;
+		background-color: #ccc;
+	}
+
+	.list {
+		font-size:25px;
+		border-bottom: solid 5px #e46969;
+		padding-left:10px;
+	}
+
+	.info {
+		width:60%;
+		margin: 7px  auto;
+		text-align: center;
+		font-family: georgia;
+		font-size:18px;
+		border-bottom: solid 2px #eee;
+		padding: 7px;
+	}
+
+	.revR {
+		font-size:15px;
+		color:red;
+		text-align:center;
+		padding:5px;
+		text-transform: capitalize;
+	}
+
+	.reviews {
+		border:solid 2px black;
+		margin:auto;
+		width:85%;
+		border-radius: 10px;
+		margin-bottom: 7px;
+	}
+
+	.revP {
+		text-align: center;
+		font-size: 14px;
+		font-family: georgia;
+		color:#191d9e;
+		text-shadow:2px 2px #eee;
+		padding:5px;
+		border-bottom: solid 1px black;
+	}
+}

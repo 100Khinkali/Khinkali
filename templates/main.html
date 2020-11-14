@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block main %}
+	<a type='button' href='/logout' class='logout'>Log Out</a>
+	<h1 class="header" style='border-bottom:solid 5px #eee;'>Welcome</h1>
+
+	<div class="info">
+		<b>Search Your Book By Title, Author Or ISBN</b>
+	</div>
+
+	<form action="/books" method="post">
+		<div class="reg">
+			<label for="search" style="width:35%;">Search:</label>
+			<div>
+				<input type="text" name="search" id="search" class="input">
+			</div>
+		</div>
+		<button href="{{ url_for('books') }}" type="submit" class="submit">Search</button>
+	</form>
+
+{% endblock %}
