@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stonks
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="get">
+        <h2>A share of {{ quote["name"] }}, ({{ quote["symbol"] }}) costs ${{ quote["price"] }}</h2>
+        <button a href="/" class="btn btn-primary">Go Back</button>
+    </form><br>
+    <IMG SRC="https://i.imgur.com/EFqRbev.png">
+{% endblock %}

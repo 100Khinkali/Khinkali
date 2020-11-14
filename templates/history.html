@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="get">
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Shares</th>
+      <th scope="col">Price</th>
+      <th scope="col">Transacted</th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for I in range(saxelebi) %}
+            <tr>
+                <th scope ="row"><u>{{ rows[I]["Name"] }}</u></th>
+                <td><strong>{{ rows[I]["Shares"] }}</strong></td>
+                <td><strong><font color="blue">{{ quote[I]["price"]|usd }}</font></strong></td>
+                <td><strong>{{ rows[I]["dro"] }}</strong></td>
+            </tr>
+        {% endfor %}
+  </tbody>
+</table>
+
+
+    </form>
+{% endblock %}

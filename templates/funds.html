@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    ADDfunds
+{% endblock %}
+
+{% block main %}
+    <form action="/addfunds" method="post">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default" style="background-color:#60a8ff;">Username</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Username" name="saxel">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default" style="background-color:#60a8ff;">Amount:&nbsp&nbsp</span>
+            </div>
+            <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" min="1" max="1000" placeholder="You can only add so much at a time(1000)" name="amount">
+        </div>
+        <button a href="/" class="btn btn-primary">Buy</button>
+    </form>
+{% endblock %}

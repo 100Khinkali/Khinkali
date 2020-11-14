@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Donate
+{% endblock %}
+
+{% block main %}
+<h1 id="h">How Generous Of YA</h1>
+    <form action="/donate" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="amount" placeholder="Charity" type="number" min="1">
+        </div>
+        <button a href="/" class="btn btn-primary">$Donate$</button>
+    </form><br>
+<IMG SRC="https://media.giphy.com/media/5fBH6zoAQg9dHK2ttsc/giphy.gif">
+{% endblock %}

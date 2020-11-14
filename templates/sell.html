@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+        <form action="/sell" method="post">
+        <div class="form-group">
+            <select class="meniu" placeholder="Symbol" name="symbol">
+                <option selected disabled>Symbol</option>
+                {% for i in range(imia) %}
+                <option>{{ saxeli[i]["Name"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Shares" type="number" min="1">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+{% endblock %}

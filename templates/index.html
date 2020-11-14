@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="get">
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Name</th>
+      <th scope="col">Shares</th>
+      <th scope="col">Price</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+    {% for I in range((saxelebi-1), -1, -1) %}
+        <tr>
+
+        <th scope ="row"><u>{{ rows[I]["Name"] }}</u></th>
+        <td><i>{{ quote[I]["name"] }}</i></td>
+        <td><strong><font color="blue">{{ mayuti[I]["SUM (Shares)"] }}</font></strong></td>
+        <td><strong>{{ quote[I]["price"]|usd }}</strong></td>
+        <td><strong>{{ mayuti[I]["SUM (Amount)"]|usd}}</strong></td>
+
+      </tr>
+
+    {% endfor %}
+
+  <tr>
+      <th scope="row">CASH</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><strong>{{ cash }}</strong></td>
+  </tr>
+  <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><strong><u><font color="red">{{ fulebi }}</font></u></strong></td>
+  </tr>
+
+  </tbody>
+</table>
+
+    </form>
+{% endblock %}

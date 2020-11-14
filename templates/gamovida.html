@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    You Did It
+{% endblock %}
+
+{% block main %}
+    <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/AAa2bgs.gif" title="{{ top }}">
+    <meta http-equiv="refresh" content="3;url=/" />
+    <h2>Redirecting in 3...</h2>
+{% endblock %}
